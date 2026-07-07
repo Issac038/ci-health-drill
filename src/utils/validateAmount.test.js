@@ -25,8 +25,7 @@ describe('validateAmount', () => {
     expect(validateAmount(NaN)).toBe(false);
   });
 
-  // ⚠️  Skipped — negative amount rejection not yet implemented in validateAmount.js
-  test.skip('rejects negative amounts — not implemented yet', () => {
+  test('rejects negative amounts', () => {
     expect(validateAmount(-50)).toBe(false);
   });
 });

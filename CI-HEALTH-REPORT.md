@@ -108,11 +108,11 @@ The pipeline currently provides **no reliable ship/no-ship signal**. The top thr
 - **Tool / file:** `.github/workflows/ci.yml` + GitHub → Settings → Branches.
 - **Expected outcome:** **0 unreviewed commits** on `main`; reproducible installs from the lockfile; CI runs on a supported runtime.
 
-### CA-5 — Implement and un-skip negative-amount validation (addresses Observation 5) — **P3 (backlog)**
+### CA-5 — Implement and un-skip negative-amount validation (addresses Observation 5) — **P1 (this sprint) — APPLIED**
 - **Problem:** Negative-amount rejection test is skipped, hiding a money-validation coverage gap (Obs 5).
-- **Action:** Confirm `validateAmount` rejects negatives (`amount <= 0` already does), remove the `test.skip`, and make it a normal passing test.
+- **Action:** Confirmed `validateAmount` rejects negatives (`amount <= 0` already implemented), removed the `test.skip`, and made it a normal passing test. Applied in this PR.
 - **Tool / file:** `src/utils/validateAmount.test.js`.
-- **Expected outcome:** **0 skipped tests** in the suite; explicit coverage of negative-amount rejection.
+- **Expected outcome:** **0 skipped tests** in the suite; explicit coverage of negative-amount rejection. ✅ **ACHIEVED** — test now passes.
 
 ---
 
